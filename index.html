@@ -3,138 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Mom</title>
+    <title>For You, Mom</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Lora', serif; 
-            background-color: #faf7f2; /* Soft cream background */
-            color: #4a443d; /* Warm dark gray/brown */
-            scroll-behavior: smooth; 
+            background-color: #fdfbf9; /* Soft paper white */
+            color: #4a443d;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
         }
         .handwritten { font-family: 'Caveat', cursive; }
         
-        /* Polaroid photo style */
-        .polaroid {
-            background: white;
-            padding: 1rem 1rem 3rem 1rem;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: transform 0.4s ease;
+        .letter-card {
+            background: #ffffff;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            border: 1px solid #f1ece4;
+            max-width: 600px;
+            width: 100%;
+            padding: 3rem;
+            position: relative;
+            transform: translateY(0);
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-        .polaroid:hover {
-            transform: scale(1.02) rotate(0deg) !important;
-            z-index: 10;
+
+        .letter-card::before {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid #f1ece4;
+            pointer-events: none;
         }
-        
-        .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+        .letter-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .divider {
+            height: 1px;
+            width: 80px;
+            background: #c18b7d;
+            margin: 2rem auto;
+        }
     </style>
 </head>
-<body class="antialiased selection:bg-[#e8d5c4] selection:text-black">
+<body class="antialiased">
 
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 pt-10">
-        <div class="fade-in max-w-2xl">
-            <p class="handwritten text-4xl text-[#c18b7d] mb-4">Happy Mother's Day</p>
-            <h1 class="text-5xl md:text-7xl font-semibold tracking-tight mb-8">To the woman who gave me everything.</h1>
-            <p class="text-xl md:text-2xl leading-relaxed text-[#6b6255]">
-                This is a small space dedicated just to you, to remind you of how incredibly loved you are today, and every day.
-            </p>
-        </div>
-        
-        <!-- Main Photo -->
-        <div class="mt-16 fade-in polaroid w-full max-w-md transform -rotate-2">
-            <!-- Replace 'mom-main.jpg' with your photo -->
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=800" alt="Me and Mom" class="w-full h-80 object-cover rounded-sm">
-            <p class="handwritten text-2xl text-center mt-4 text-gray-500">My favorite person.</p>
-        </div>
-    </section>
-
-    <!-- Reasons Section -->
-    <section class="py-32 px-6">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl md:text-4xl text-center mb-16 italic">Just a few of the things I love about you...</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <div class="text-center fade-in">
-                    <div class="w-16 h-16 bg-[#f0e6da] rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-[#c18b7d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Your Endless Warmth</h3>
-                    <p class="text-[#6b6255]">You have a way of making any place feel like home the second you walk in.</p>
-                </div>
-                <div class="text-center fade-in delay-100">
-                    <div class="w-16 h-16 bg-[#f0e6da] rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-[#c18b7d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Your Advice</h3>
-                    <p class="text-[#6b6255]">Even when I don't want to hear it, you always know exactly what I need to do.</p>
-                </div>
-                <div class="text-center fade-in delay-200">
-                    <div class="w-16 h-16 bg-[#f0e6da] rounded-full flex items-center justify-center mx-auto mb-6">
-                        <svg class="w-8 h-8 text-[#c18b7d]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    </div>
-                    <h3 class="text-xl font-semibold mb-3">Your Laugh</h3>
-                    <p class="text-[#6b6255]">It is my absolute favorite sound in the world.</p>
-                </div>
+    <main class="w-full flex justify-center">
+        <div class="letter-card">
+            <!-- Header -->
+            <div class="text-center mb-10">
+                <p class="handwritten text-3xl text-[#c18b7d] mb-2">Happy Mother's Day</p>
+                <div class="divider"></div>
             </div>
-        </div>
-    </section>
 
-    <!-- Photo Memory Grid -->
-    <section class="py-20 px-6 bg-[#f5efe6]">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="handwritten text-4xl text-center text-[#c18b7d] mb-12">Some of my favorite memories</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <!-- Polaroid 1 -->
-                <div class="polaroid transform rotate-3 fade-in mx-auto w-full max-w-sm">
-                    <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155c1?auto=format&fit=crop&q=80&w=600" alt="Memory 1" class="w-full h-64 object-cover">
-                    <p class="handwritten text-xl text-center mt-3 text-gray-500">That trip we took...</p>
-                </div>
-                <!-- Polaroid 2 -->
-                <div class="polaroid transform -rotate-3 fade-in mx-auto w-full max-w-sm">
-                    <img src="https://images.unsplash.com/photo-1475855581690-80cb64fd45efa?auto=format&fit=crop&q=80&w=600" alt="Memory 2" class="w-full h-64 object-cover">
-                    <p class="handwritten text-xl text-center mt-3 text-gray-500">Always laughing.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- The Letter -->
-    <section class="py-32 px-6">
-        <div class="max-w-2xl mx-auto bg-white p-10 md:p-16 rounded-lg shadow-sm fade-in border border-[#f0e6da]">
-            <h2 class="text-3xl mb-8 font-semibold">Dear Mom,</h2>
-            <div class="space-y-6 text-lg leading-relaxed text-[#6b6255]">
+            <!-- The Letter -->
+            <div class="space-y-6 text-lg leading-relaxed text-[#5a544d]">
+                <h2 class="text-2xl font-semibold italic mb-4">Dear Mom,</h2>
+                
                 <p>
-                    I wanted to do something a little different this year. A card is nice, but I wanted to make something that could hold more words, more memories, and more love.
+                    I wanted to create a special place just for you today. More than just a store-bought card, I wanted to give you something unique that shows how much you mean to me.
                 </p>
+                
                 <p>
-                    Thank you for the countless sacrifices you've made that I never even saw. Thank you for the patience you showed me when I was growing up, and the friendship you give me now. You are not just my mother; you are my role model.
+                    Thank you for your endless support, your wisdom, and for being the heart of our family. You make the hard days easier and the good days even better just by being there.
                 </p>
+                
                 <p>
-                    I am so proud to be your child. Have the most wonderful Mother's Day.
+                    Today is all about celebrating you. I hope you feel as special and loved as you truly are.
                 </p>
             </div>
-            <p class="mt-12 text-xl">With all my love,</p>
-            <!-- Put your name here -->
-            <p class="handwritten text-5xl text-[#c18b7d] mt-4"> - Rishi</p>
+
+            <!-- Signature -->
+            <div class="mt-12 text-right">
+                <p class="text-lg italic">With all my love,</p>
+                <p class="handwritten text-5xl text-[#c18b7d] mt-2 inline-block">
+                    [- Rishi]
+                </p>
+            </div>
         </div>
-    </section>
+    </main>
 
-    <script>
-        // Simple script to fade elements in as you scroll
-        document.addEventListener("DOMContentLoaded", function() {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-        });
-    </script>
 </body>
 </html>
