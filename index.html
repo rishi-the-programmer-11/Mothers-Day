@@ -3,103 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You, Mom</title>
+    <title>Mother's Day 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
         body { 
             font-family: 'Lora', serif; 
-            background-color: #eef7ff; 
+            background-color: #f0f7ff; 
             color: #1a365d;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px;
         }
         
         .letter-card {
             background: #ffffff;
-            box-shadow: 0 30px 60px rgba(26, 54, 93, 0.15);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
             max-width: 600px;
             width: 100%;
-            padding: 4rem 3rem;
-            border-top: 8px solid #2b6cb0; /* Her favorite blue */
-            border-radius: 8px;
+            padding: 4rem 3.5rem;
+            border-top: 8px solid #2b6cb0; 
+            border-radius: 12px;
+            position: relative;
+            overflow: visible; /* Ensures nothing inside gets cut off */
         }
 
-        /* Fixed Pink Gradient */
-        .pink-gradient {
+        .pink-text {
             font-family: 'Caveat', cursive;
             font-size: 3.5rem;
-            background: linear-gradient(to right, #ff3385, #ff758c);
+            color: #ff3385;
+            background: -webkit-linear-gradient(#ff3385, #ff85b3);
             -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent; /* If this fails, the line below will show */
             -webkit-text-fill-color: transparent;
-            display: block;
-            margin-bottom: 10px;
-            /* Fallback for some browsers */
-            @supports not (-webkit-background-clip: text) {
-                color: #ff3385;
-            }
+            line-height: 1.2;
         }
 
-        /* Fixed Glitter Name */
+        .signature-container {
+            margin-top: 4rem;
+            text-align: right;
+            padding-right: 10px; /* Gives space on the right */
+        }
+
         .glitter-name {
             font-family: 'Caveat', cursive;
-            font-size: 4rem;
+            font-size: 4rem; /* Adjusted size for better rendering */
+            color: #b8860b; 
+            text-shadow: 0px 0px 8px rgba(255,223,0,0.4);
             display: inline-block;
-            line-height: 1.2; /* Prevents name from being cut off */
-            padding: 10px 0;
-            background: linear-gradient(
-                90deg, 
-                #d4af37 0%, 
-                #f9e29c 25%, 
-                #ffffff 50%, 
-                #f9e29c 75%, 
-                #d4af37 100%
-            );
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: #d4af37; /* Fallback color so it's always visible */
-            -webkit-text-fill-color: transparent;
-            animation: shine 3s linear infinite;
-        }
-
-        @keyframes shine {
-            to { background-position: 200% center; }
+            line-height: 1;
+            /* The 'Rishi' Fix: Heavy padding and forced overflow */
+            padding-left: 40px; 
+            padding-right: 10px;
+            overflow: visible !important;
+            white-space: nowrap;
         }
 
         .divider {
-            height: 1px;
+            height: 2px;
             width: 60px;
             background: #2b6cb0;
-            margin: 1rem auto 2.5rem auto;
+            margin: 1.5rem auto;
+        }
+
+        .year-stamp {
+            margin-top: 4rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.4em;
+            color: #94a3b8;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
     <div class="letter-card">
-        <div class="text-center">
-            <h1 class="pink-gradient">Happy Mother's Day</h1>
+        <div class="text-center mb-10">
+            <h1 class="pink-text">Happy Mother's Day</h1>
             <div class="divider"></div>
         </div>
 
-        <div class="space-y-6 text-lg leading-relaxed text-slate-700">
+        <div class="space-y-6 text-xl leading-relaxed text-slate-700">
             <h2 class="text-2xl font-bold italic text-[#2b6cb0]">Dear Mom,</h2>
             <p>I wanted to make something special in your favorite blue to let you know how much I love you.</p>
             <p>Thank you for everything you do for me. You are the strongest and most caring person I know, and I'm so lucky to have you as my mom.</p>
             <p>I hope you have a relaxing day today. You deserve the absolute best.</p>
         </div>
 
-        <div class="mt-16 text-right">
+        <div class="signature-container">
             <p class="text-slate-400 italic mb-1">With all my love,</p>
-            <!-- Put your name below -->
-            <span class="glitter-name">- Rishi </span>
+            <span class="glitter-name">Rishi</span>
+        </div>
+
+        <div class="year-stamp">
+            2026
         </div>
     </div>
 
