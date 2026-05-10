@@ -9,8 +9,8 @@
     <style>
         body { 
             font-family: 'Lora', serif; 
-            background-color: #fdfbf9; /* Soft paper white */
-            color: #4a443d;
+            background-color: #f0f7ff; /* Very light blue tint */
+            color: #1a365d; /* Deep Navy Text */
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,37 +22,34 @@
         
         .letter-card {
             background: #ffffff;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-            border: 1px solid #f1ece4;
+            box-shadow: 0 20px 50px rgba(26, 54, 93, 0.1);
+            border: 2px solid #e0eeff;
             max-width: 600px;
             width: 100%;
             padding: 3rem;
             position: relative;
-            transform: translateY(0);
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
+        /* The inner border */
         .letter-card::before {
             content: "";
             position: absolute;
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-            border: 1px solid #f1ece4;
+            top: 12px;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            border: 1px solid #cbdff7;
             pointer-events: none;
         }
 
-        .letter-card:hover {
-            transform: translateY(-5px);
+        .divider {
+            height: 2px;
+            width: 60px;
+            background: #2b6cb0; /* Bright Blue */
+            margin: 1.5rem auto;
         }
 
-        .divider {
-            height: 1px;
-            width: 80px;
-            background: #c18b7d;
-            margin: 2rem auto;
-        }
+        .blue-accent { color: #2b6cb0; }
     </style>
 </head>
 <body class="antialiased">
@@ -61,31 +58,31 @@
         <div class="letter-card">
             <!-- Header -->
             <div class="text-center mb-10">
-                <p class="handwritten text-3xl text-[#c18b7d] mb-2">Happy Mother's Day</p>
+                <p class="handwritten text-4xl blue-accent mb-2">Happy Mother's Day</p>
                 <div class="divider"></div>
             </div>
 
             <!-- The Letter -->
-            <div class="space-y-6 text-lg leading-relaxed text-[#5a544d]">
-                <h2 class="text-2xl font-semibold italic mb-4">Dear Mom,</h2>
+            <div class="space-y-6 text-lg leading-relaxed">
+                <h2 class="text-2xl font-bold italic mb-4 blue-accent">Dear Mom,</h2>
                 
                 <p>
-                    I wanted to create a special place just for you today. More than just a store-bought card, I wanted to give you something unique that shows how much you mean to me.
+                    I wanted to make something special in your favorite color to let you know how much I love you. 
                 </p>
                 
                 <p>
-                    Thank you for your endless support, your wisdom, and for being the heart of our family. You make the hard days easier and the good days even better just by being there.
+                    Thank you for everything you do for me. You are the strongest and most caring person I know, and I'm so lucky to have you as my mom.
                 </p>
                 
                 <p>
-                    Today is all about celebrating you. I hope you feel as special and loved as you truly are.
+                    I hope you have a relaxing day filled with all the things you love. You deserve the absolute best.
                 </p>
             </div>
 
             <!-- Signature -->
             <div class="mt-12 text-right">
                 <p class="text-lg italic">With all my love,</p>
-                <p class="handwritten text-5xl text-[#c18b7d] mt-2 inline-block">
+                <p class="handwritten text-5xl blue-accent mt-2 inline-block">
                     - Rishi
                 </p>
             </div>
