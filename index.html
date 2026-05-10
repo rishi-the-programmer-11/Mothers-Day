@@ -3,463 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mother's Day 2026</title>
+    <title>To Mom, With Love</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background: #ffffff;
-            color: #1d1d1d;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            color: #1d1d1d;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #1d1d1d;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: #e94b7e;
-        }
-
-        /* Hero Section */
-        .hero {
-            margin-top: 60px;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #fef5f7 0%, #f9f1f4 50%, #f0e8ec 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            text-align: center;
-            max-width: 900px;
-            z-index: 10;
-            animation: fadeInDown 0.8s ease-out;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, #e94b7e 0%, #d63f6b 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero p {
-            font-size: clamp(1.1rem, 3vw, 1.4rem);
-            color: #666;
-            font-weight: 400;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            letter-spacing: 0.3px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 0.875rem 2.5rem;
-            background: #e94b7e;
-            color: white;
-            text-decoration: none;
-            border-radius: 980px;
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(233, 75, 126, 0.25);
-            border: none;
-            cursor: pointer;
-        }
-
-        .cta-button:hover {
-            background: #d63f6b;
-            box-shadow: 0 8px 30px rgba(233, 75, 126, 0.35);
-            transform: translateY(-2px);
-        }
-
-        .cta-button:active {
-            transform: translateY(0);
-        }
-
-        /* Floating Elements */
-        .floating-shape {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.1;
-            filter: blur(1px);
-        }
-
-        .shape1 {
-            width: 400px;
-            height: 400px;
-            background: #e94b7e;
-            top: -100px;
-            right: -100px;
-            animation: float 8s ease-in-out infinite;
-        }
-
-        .shape2 {
-            width: 300px;
-            height: 300px;
-            background: #d63f6b;
-            bottom: -50px;
-            left: -100px;
-            animation: float 10s ease-in-out infinite reverse;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(30px); }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Features Section */
-        .features {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 1rem;
-            letter-spacing: -0.5px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 4rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            padding: 2rem;
-            background: #f9f9f9;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-
-        .feature-card:hover {
-            background: #f0f0f0;
-            transform: translateY(-8px);
-        }
-
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-        }
-
-        .feature-card p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-
-        /* Gallery Section */
-        .gallery {
-            padding: 6rem 2rem;
-            background: #f9f9f9;
-        }
-
-        .gallery-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1;
-            background: linear-gradient(135deg, #ffd1e0 0%, #ffe4f0 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            overflow: hidden;
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(233, 75, 126, 0.15);
-        }
-
-        /* Message Section */
-        .message-section {
-            padding: 6rem 2rem;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .message-text {
-            font-size: 1.8rem;
-            line-height: 1.8;
-            color: #333;
-            font-weight: 500;
-            margin-bottom: 3rem;
-            letter-spacing: 0.3px;
-        }
-
-        .message-highlight {
-            color: #e94b7e;
-            font-weight: 700;
-        }
-
-        /* Footer */
-        footer {
-            background: #f9f9f9;
-            padding: 3rem 2rem;
-            text-align: center;
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            text-decoration: none;
-            color: #666;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
-
-        .footer-links a:hover {
-            color: #e94b7e;
-        }
-
-        .copyright {
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 0.8rem 1rem;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .nav-links a {
-                font-size: 0.8rem;
-            }
-
-            .hero {
-                margin-top: 50px;
-            }
-
-            .features-grid,
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .message-text {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* Smooth Scroll */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            50% {
-                transform: translateX(-50%) translateY(10px);
-            }
-        }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; scroll-behavior: smooth; }
+        .serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+        .hero-gradient { background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%); }
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body>
+<body class="bg-white text-[#1d1d1f] antialiased">
+
     <!-- Navigation -->
-    <nav>
-        <div class="logo">Mother's Day</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#message">Message</a></li>
-        </ul>
+    <nav class="fixed top-0 w-full z-50 glass border-b border-gray-200">
+        <div class="max-w-5xl mx-auto px-6 h-12 flex items-center justify-between">
+            <span class="text-sm font-semibold tracking-tight">Mother's Day 2026</span>
+            <div class="space-x-8 text-xs font-normal text-gray-600">
+                <a href="#story" class="hover:text-black transition">Our Story</a>
+                <a href="#gallery" class="hover:text-black transition">Gallery</a>
+                <a href="#message" class="bg-black text-white px-3 py-1 rounded-full hover:bg-gray-800 transition">For You</a>
+            </div>
+        </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="floating-shape shape1"></div>
-        <div class="floating-shape shape2"></div>
-        
-        <div class="hero-content">
-            <h1>Celebrate the Women Who Shape Our World</h1>
-            <p>Honor your mother with love, gratitude, and a gift that truly matters</p>
-            <button class="cta-button">Celebrate Now</button>
+    <section class="relative h-screen flex items-center justify-center text-center px-6 hero-gradient overflow-hidden">
+        <div class="z-10">
+            <h2 class="text-sm uppercase tracking-[0.2em] font-semibold text-gray-500 mb-4 reveal">Celebrating Excellence</h2>
+            <h1 class="text-6xl md:text-8xl font-bold tracking-tight mb-6 reveal">Mom.</h1>
+            <p class="text-xl md:text-2xl text-gray-500 max-w-2xl mx-auto leading-relaxed reveal">
+                Strength, grace, and an unconditional love that defines everything we are.
+            </p>
         </div>
-
-        <div class="scroll-indicator">
-            <span style="font-size: 1.5rem; opacity: 0.5;">↓</span>
+        <!-- Decorative subtle element -->
+        <div class="absolute bottom-10 w-full flex justify-center animate-bounce">
+            <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="普及19 9l-7 7-7-7"></path></svg>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="features">
-        <h2 class="section-title">Why Celebrate Together</h2>
-        <p class="section-subtitle">Create meaningful moments that last a lifetime</p>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">💝</div>
-                <h3>Personal Touch</h3>
-                <p>Craft heartfelt messages and memories that speak directly to her heart</p>
+    <!-- The "Why" Section -->
+    <section id="story" class="py-32 px-6 max-w-5xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div class="reveal">
+                <h3 class="text-4xl font-bold mb-6 tracking-tight">Unmatched Heart. <br><span class="text-gray-400">Engineering a lifetime of memories.</span></h3>
+                <p class="text-lg text-gray-600 leading-relaxed">
+                    Just like the most refined technology, your love works seamlessly in the background, making every day better without ever asking for credit. You are the architect of our family's happiest moments.
+                </p>
             </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">✨</div>
-                <h3>Timeless Design</h3>
-                <p>Beautiful, elegant presentation that honors the importance of the moment</p>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">🌸</div>
-                <h3>Shared Experience</h3>
-                <p>Bring family together to celebrate and express gratitude collectively</p>
+            <div class="bg-gray-100 aspect-square rounded-3xl flex items-center justify-center overflow-hidden reveal">
+                <!-- Replace with a photo of you and Mom -->
+                <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=1000" alt="Motherhood" class="object-cover w-full h-full hover:scale-105 transition duration-700">
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery" id="gallery">
-        <div class="section-title" style="margin-bottom: 3rem;">Celebrate in Style</div>
-        
-        <div class="gallery-grid">
-            <div class="gallery-item">💐</div>
-            <div class="gallery-item">❤️</div>
-            <div class="gallery-item">🌹</div>
-            <div class="gallery-item">👩‍👧</div>
-            <div class="gallery-item">🎁</div>
-            <div class="gallery-item">✨</div>
+    <!-- Feature Grid -->
+    <section class="py-32 bg-[#f5f5f7]">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-sm reveal">
+                    <span class="text-3xl mb-4 block">🤍</span>
+                    <h4 class="text-xl font-semibold mb-2">Infinite Patience</h4>
+                    <p class="text-gray-500 text-sm">Always listening, always guiding, no matter the hour.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm reveal">
+                    <span class="text-3xl mb-4 block">✨</span>
+                    <h4 class="text-xl font-semibold mb-2">Unspoken Grace</h4>
+                    <p class="text-gray-500 text-sm">Handling every challenge with a quiet, powerful strength.</p>
+                </div>
+                <div class="bg-white p-10 rounded-3xl shadow-sm reveal">
+                    <span class="text-3xl mb-4 block">🏠</span>
+                    <h4 class="text-xl font-semibold mb-2">The Ultimate Home</h4>
+                    <p class="text-gray-500 text-sm">Wherever you are, that is where we feel most safe.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Message Section -->
-    <section class="message-section" id="message">
-        <h2 class="section-title">A Timeless Tribute</h2>
-        <p class="message-text">
-            Mothers are the architects of our dreams and the foundation of our strength. 
-            On this special day, we honor <span class="message-highlight">every sacrifice, every laugh, and every moment</span> 
-            that has made us who we are today. 
-            <br><br>
-            <span class="message-highlight">Thank you for everything.</span>
-        </p>
-        <button class="cta-button">Send Your Love</button>
+    <!-- Personal Message Section -->
+    <section id="message" class="py-40 px-6 text-center">
+        <div class="max-w-3xl mx-auto reveal">
+            <h2 class="serif italic text-4xl md:text-5xl mb-8">"To the world, you are a mother. To our family, you are the world."</h2>
+            <div class="h-px w-20 bg-gray-300 mx-auto mb-8"></div>
+            <p class="text-xl text-gray-600 leading-relaxed">
+                Thank you for being the standard of kindness and the definition of love. We hope today is as beautiful as the life you've built for us.
+            </p>
+            <p class="mt-12 font-semibold text-lg italic">— Rishi</p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="#home">About</a>
-                <a href="#features">Services</a>
-                <a href="#gallery">Gallery</a>
-                <a href="#">Contact</a>
-            </div>
-            <p class="copyright">&copy; 2026 Mother's Day Celebration. All rights reserved. Made with ❤️</p>
-        </div>
+    <footer class="py-20 border-t border-gray-100 text-center text-xs text-gray-400 tracking-widest uppercase">
+        Designed with love &bull; 2026
     </footer>
+
+    <script>
+        // Reveal animation on scroll
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
